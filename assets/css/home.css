@@ -5,10 +5,7 @@
     height: auto;
     width: 100%;
     box-sizing: border-box;
-    align-items: center;
-    align-content: center;
-    padding: 5%;
-    border-color: 1px solid black;
+    padding: 25px;
     background-color: aquamarine;
 }
 .description{
@@ -19,6 +16,9 @@
     margin-top: 1px;
     font-size: 1.5rem;
     margin-bottom: 2px;
+}
+.description:hover{
+    background-color: rgb(184, 241, 222);
 }
 #des-text{
     border: none;
@@ -33,10 +33,76 @@
     outline: 0;
 }
 .catg-date-section{
+    padding: 5px;
+    /* margin-top: 4px; */
     box-sizing: border-box;
     display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid white;
 }
-.catagory .date{
-    width: 45%;
-    
+.catg-date-section:hover{
+    background-color: rgb(184, 241, 222);
+}
+.catagory , .date{
+    width: 50%;
+    font-size: 1.4rem;
+}
+.catagory{
+    border-right: 2px solid white;
+}
+.catagory:hover{
+    background-color: rgb(184, 241, 222);
+}
+.date{
+    padding-left: 5px;
+}
+.date:hover{
+    background-color: rgb(184, 241, 222);
+}
+#cat-type{
+    width: 96%;
+    height: 25px;
+    outline: 0px;
+    border: none;
+    background-color: transparent;
+}
+.buttons{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    padding: 10px;
+    border-bottom: 2px solid white;
+    width: 100%;
+}
+.add-button > button{
+    height: 60px;
+    width: 155px;
+    font-size: 1.2rem;
+    align-items: center;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+.del-button > button{
+    height: 60px;
+    width: 155px;
+    font-size: 1.2rem;
+    align-items: center;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+.add-button > button:hover{
+    background-color: green;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 400;
+    transition: 0.2s all ease-in;
+}
+.del-button > button:hover{
+    background-color: red;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 400;
+    transition: 0.2s all ease-in;
 }
