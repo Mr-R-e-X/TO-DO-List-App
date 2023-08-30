@@ -40,14 +40,12 @@
     justify-content: space-between;
     border-bottom: 2px solid white;
 }
-.catg-date-section:hover{
-    background-color: rgb(184, 241, 222);
-}
-.catagory , .date{
+
+.catagory-list , .date{
     width: 50%;
     font-size: 1.4rem;
 }
-.catagory{
+.catagory-list{
     border-right: 2px solid white;
 }
 .catagory:hover{
@@ -69,23 +67,36 @@
 .buttons{
     display: flex;
     box-sizing: border-box;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     padding: 10px;
     border-bottom: 2px solid white;
     width: 100%;
 }
+.add-button{
+    display: inline;
+    padding: 2px;
+    margin-left: 37%;
+}
 .add-button > button{
     height: 60px;
-    width: 155px;
+    width: 100%;
     font-size: 1.2rem;
     align-items: center;
     text-align: center;
     border: none;
     cursor: pointer;
 }
+a {
+    text-decoration: none;
+    color: white;
+}
+.del-button{
+    display: inline;
+    padding: 2px;
+}
 .del-button > button{
     height: 60px;
-    width: 155px;
+    width: 100%;
     font-size: 1.2rem;
     align-items: center;
     text-align: center;
@@ -105,4 +116,13 @@
     font-size: 1.25rem;
     font-weight: 400;
     transition: 0.2s all ease-in;
+}
+.list-container{
+    display: flex;
+    justify-content: space-between;
+}
+.todo-cat{
+    height: 30px;
+    width: auto;
+    background-color: antiquewhite;
 }

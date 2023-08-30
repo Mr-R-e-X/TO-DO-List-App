@@ -2,12 +2,10 @@ const express = require('express');
 
 const router = express.Router();
 
-const homeController = require('../controllers/home_controller');
-
+const addTaskController = require('../controllers/addTaskController')
 
 console.log('router loaded');
 
-router.get('/', homeController.home);
-
+router.post('/add-todo', addTaskController.add_todo);
 
 module.exports = router;

@@ -1,14 +1,27 @@
-<link rel="stylesheet" href="/css/home.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+<header>
+    <h1> Your ToDo List </h1>
+</header>
+
+<form action='/add-todo' method="post">
 <div class="container">
     <div class="description">
         <p>Description</p>
-        <textarea name="description" id="des-text" cols="60" rows="2" placeholder="What do you need to do?"></textarea>
+        <textarea name="description" id="des-text" cols="60" rows="2" placeholder="What do you need to do?" required></textarea>
     </div>
     <div class="catg-date-section">
-        <div class="catagory">
+        <div class="catagory-list">
             Catagory
-                <label for="catagory" ></label>
-                <select name="catagory" id="cat-type">
+                <select name="catagory" id="cat-type" required>
                     <option value="">Choose Your Reminder Catagory</option>
                     <option value="Urgent" class="urgent">Urgent</option>
                     <option value="Important" class="_important">Important</option>
@@ -17,22 +30,38 @@
                     <option value="Work" class="work">Work</option>
                     <option value="Other" class="other">Other</option>
                 </select>
+
         </div>
 
         <div class="date">
-            DD/MM/YY
+            Due Date
+            <div><input type="date" id="date" name="date"></div>
         </div>
     </div>
     <div class="buttons">
+        
         <div class="add-button">
-            <button type="button"><i class="fa-regular fa-plus" style="color: #ffffff;"></i> Add Task</button>
+           <button type="submit"> <i class="fa-regular fa-plus" style="color: #ffffff;"></i> Add Task </button>
         </div>
+</form>
         <div class="del-button">
-            <button type="button"><i class="fa-solid fa-trash" style="color: #ffffff;"></i> Delete Task</button>
+            <button type="button"> <i class="fa-solid fa-trash" style="color: #ffffff;"></i> Delete Task </button>
         </div>
     </div>
-    <div class="list-container">
-
+    <div class="list-container" style="display: inline-block;">
+        <% for (const todo of todo_list) { %>
+            <p> <%= todo.description %> </p>
+            <p> <%= todo.catagory %> </p>
+            <p> <%= todo.date %> </p>
+        <% } %>
+    </ul>
     </div>
 </div>
+
+
+
+
 <script src="https://kit.fontawesome.com/bf0cf320c3.js" crossorigin="anonymous"></script>
+<script src="/js/home.js"></script>
+</body>
+</html>
