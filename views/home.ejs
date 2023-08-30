@@ -23,12 +23,12 @@
             Catagory
                 <select name="catagory" id="cat-type" required>
                     <option value="">Choose Your Reminder Catagory</option>
-                    <option value="Urgent" class="urgent">Urgent</option>
-                    <option value="Important" class="_important">Important</option>
-                    <option value="Personal" class="personal">Personal</option>
-                    <option value="Social" class="social">Social</option>
-                    <option value="Work" class="work">Work</option>
-                    <option value="Other" class="other">Other</option>
+                    <option value="Urgent">Urgent</option>
+                    <option value="Important">Important</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Social">Social</option>
+                    <option value="Work">Work</option>
+                    <option value="Other">Other</option>
                 </select>
 
         </div>
@@ -41,23 +41,40 @@
     <div class="buttons">
         
         <div class="add-button">
-           <button type="submit"> <i class="fa-regular fa-plus" style="color: #ffffff;"></i> Add Task </button>
+           <button type="submit"><i class="fa-regular fa-plus addicon-bg" style="color: #ffffff;"></i> Add Task </button>
         </div>
-</form>
+
         <div class="del-button">
-            <button type="button"> <i class="fa-solid fa-trash" style="color: #ffffff;"></i> Delete Task </button>
+            <button type="button"> <i class="fa-solid fa-trash delicon-bg" style="color: #ffffff;"></i> Delete Task </button>
         </div>
     </div>
-    <div class="list-container" style="display: inline-block;">
-        <% for (const todo of todo_list) { %>
-            <p> <%= todo.description %> </p>
-            <p> <%= todo.catagory %> </p>
-            <p> <%= todo.date %> </p>
-        <% } %>
-    </ul>
+    <div class="list-container" id="listid">
+        
+            <% for (const todo of todo_list) { %>
+                <table class="apendList">
+                <tr>
+                    <td style="width: 60vw; border-bottom: 2px solid white; border-radius: 10px;">
+                        <input type="checkbox" name="status" todo-item-id="<%= todo._id %>" class="custom-checkbox">
+                        <span id="apendDes"> 
+                            <%= todo.description %>
+                        </span>
+                    </td>
+                    <td style="width: 15vw; text-align: center; border-radius: 10px; border-left: 2px solid white; border-right: 2px solid white; border-bottom: 2px solid white;">
+                        <span id="apendDate">
+                            <%= todo.date %>
+                        </span>
+                    </td>
+                    <td style="width: 15vw; text-align: center; border-left: 2px solid white; border-right: 2px solid white; border-bottom: 2px solid white; border-radius: 10px;" class="<%= todo.catagory %>">
+                        <span id="apendCat" class="<%= todo.catagory %>">
+                            <%= todo.catagory %>
+                        </span>
+                    </td>
+                </tr>
+                </table>
+            <% } %>
     </div>
 </div>
-
+</form>
 
 
 

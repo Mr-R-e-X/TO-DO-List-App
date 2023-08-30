@@ -5,9 +5,9 @@ header{
     padding: 5px;
     color: transparent;
     -webkit-text-stroke: 1px black;
-    background-color: aquamarine;
-
+    background-color: rgb(174, 228, 210);
 }
+
 h1{
     position: relative;
     background-image: url(https://images.pexels.com/photos/3189607/pexels-photo-3189607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
