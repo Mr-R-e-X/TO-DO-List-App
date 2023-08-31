@@ -43,9 +43,10 @@
         <div class="add-button">
            <button type="submit"><i class="fa-regular fa-plus addicon-bg" style="color: #ffffff;"></i> Add Task </button>
         </div>
-
+</form>
+<form action="/delete-task" method="get">
         <div class="del-button">
-            <button type="button"> <i class="fa-solid fa-trash delicon-bg" style="color: #ffffff;"></i> Delete Task </button>
+            <button type="submit"> <i class="fa-solid fa-trash delicon-bg" style="color: #ffffff;"></i> Delete Task </button>
         </div>
     </div>
     <div class="list-container" id="listid">
@@ -54,8 +55,8 @@
                 <table class="apendList">
                 <tr>
                     <td style="width: 60vw; border-bottom: 2px solid white; border-radius: 10px;">
-                        <input type="checkbox" name="status" todo-item-id="<%= todo._id %>" class="custom-checkbox">
-                        <span id="apendDes"> 
+                        <a href="/status"><input type="checkbox" name="<%= todo._id %>" id="<%= todo._id %>" class="custom-checkbox"></a>
+                        <span id="apendDes">
                             <%= todo.description %>
                         </span>
                     </td>
@@ -75,6 +76,7 @@
     </div>
 </div>
 </form>
+
 
 
 

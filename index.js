@@ -8,6 +8,7 @@ const todo = require('./models/todo.js');
 const path = require('path');
 const home = require('./routes');
 const add_todo = require('./routes/addTodo.js');
+const delete_todo = require('./routes/deleteTodo.js');
 // const render_route = require('./routes/renderTodo.js');
 
 
@@ -17,7 +18,7 @@ app.use(bodyParser.json());
 // app.use(expressLayouts);
 app.use('/', home); // setting up express routes.
 app.use('/', add_todo);
-// app.use('/', render_route);
+app.use('/', delete_todo);
 
 app.set('view engine', 'ejs'); // setting up view engine.
 // app.set('views', path.join(__dirname, 'views')); // setting up view folder src.

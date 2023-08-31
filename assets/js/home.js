@@ -1,5 +1,5 @@
 
-
+const todo = require('./models/todo.js');
 
 const datePicker = document.getElementById('date');
 
@@ -14,4 +14,5 @@ const formattedCurrentDate = currentDate.toISOString().slice(0,10);
 datePicker.setAttribute('min', formattedCurrentDate);
 console.log(formattedCurrentDate);
 
-const list_status = document.querySelectorAll('input[type="checkbox"]');
+
+
